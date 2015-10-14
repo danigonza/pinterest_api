@@ -1,0 +1,16 @@
+PATH
+  remote: .
+  specs:
+    pinterest_api (0.0.1)
+      rest-client (~> 0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rest-client (0.9.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  pinterest_api!
