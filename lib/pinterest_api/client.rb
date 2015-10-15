@@ -7,15 +7,15 @@ module PinterestApi
     end
 
     def me
-      self.get('me/')
+      get('me/')
     end
 
     def create_pin(pin_params)
-      self.post('pins/', pin_params)
+      post('pins/', pin_params)
     end
 
     def boards
-      self.get('me/boards/')
+      get('me/boards/')
     end
 
     private
