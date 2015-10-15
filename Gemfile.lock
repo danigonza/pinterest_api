@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pinterest_api (0.0.1)
+    pinterest_api (0.0.2)
       rest-client (~> 0)
 
 GEM

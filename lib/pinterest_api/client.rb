@@ -21,18 +21,16 @@ module PinterestApi
     private
 
     def get(path, parameters = {})
-      parameters.merge!(access_token: @access_token)
-      JSON.parse RestClient.get(api_url(path), :params => parameters)
+      JSON.parse RestClient.get(api_url(path, @access_token), :params => parameters)
     end
 
     def post(path, parameters = {})
-      parameters.merge!(access_token: @access_token)
-      JSON.parse RestClient.post(api_url(path), parameters)
+      JSON.parse RestClient.post(api_url(path, @access_token), parameters)
     end
 
-    def api_url(path)
+    def api_url(path, token)
       path = path.gsub /^\//, ''
-      "#{API_URL}#{path}"
+      "#{API_URL}#{path}?access_token=#{token}"
     end
 
   end
